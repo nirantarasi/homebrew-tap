@@ -5,21 +5,21 @@
 class K3sctl < Formula
   desc "CLI tool to manage k3s Kubernetes clusters"
   homepage "https://github.com/nirantarasi/k3sctl"
-  version "1.1.0"
+  version "1.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.0/k3sctl_1.1.0_darwin_amd64.tar.gz"
-      sha256 "91aa4bd94986c875573be025837ca2a76d0be308bdeb4cae5fa0852bd69a6831"
+      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.4/k3sctl_1.1.4_darwin_amd64.tar.gz"
+      sha256 "f510103031d82cb2c613c56b4f721a30913aff9a90ea19a331d01a9e48941716"
 
       define_method(:install) do
         bin.install "k3sctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.0/k3sctl_1.1.0_darwin_arm64.tar.gz"
-      sha256 "152a5746d9ed5aefcaae6a2a3be8cf37d30497e7675895eee18cb8174ae8fde4"
+      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.4/k3sctl_1.1.4_darwin_arm64.tar.gz"
+      sha256 "a694b733e70ab21beef0eab9a8f4b1b6b71d93f7593d3455a98db0e1201595ee"
 
       define_method(:install) do
         bin.install "k3sctl"
@@ -29,15 +29,15 @@ class K3sctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.0/k3sctl_1.1.0_linux_amd64.tar.gz"
-      sha256 "447aacd9e801b10d4e073b4363c23de8f4d2a6b2b94449bb849774671ac2547c"
+      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.4/k3sctl_1.1.4_linux_amd64.tar.gz"
+      sha256 "aa76ed1ddb5af6d757655a8fd775ea836c4dae68174abcc9150da71fcc9f97bd"
       define_method(:install) do
         bin.install "k3sctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.0/k3sctl_1.1.0_linux_arm64.tar.gz"
-      sha256 "4221c2ee279adf1f039e7fd9fdba618dd997ada21ed44663a26dbe37644ed9d5"
+      url "https://github.com/nirantarasi/k3sctl/releases/download/v1.1.4/k3sctl_1.1.4_linux_arm64.tar.gz"
+      sha256 "ce53664db7c0381c8c70fb865b9866db4b0c28d683e40f2884699e79647df833"
       define_method(:install) do
         bin.install "k3sctl"
       end
